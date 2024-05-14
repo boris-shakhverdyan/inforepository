@@ -41,11 +41,10 @@ class TotalSelfRansoms extends Value
 
     /**
      * Determine the amount of time the results of the metric should be cached.
-     *
-     * @return Carbon
      */
-    public function cacheFor(): Carbon
+    public function cacheFor()
     {
-         return now()->addDay();
+//         return now()->addDay();
+         return null;
     }
 }

@@ -22,7 +22,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     {
         parent::boot();
 
-        Nova::mainMenu(function (Request $request) {
+        Nova::mainMenu(function () {
             return [
                 MenuSection::dashboard(Main::class)->icon("chart-bar"),
 
@@ -55,11 +55,11 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
      */
     protected function gate()
     {
-        Gate::define('viewNova', function ($user) {
-            return in_array($user->email, [
-                //
-            ]);
-        });
+//        Gate::define('viewNova', function ($user) {
+//            return in_array($user->email, [
+//                //
+//            ]);
+//        });
     }
 
     /**
